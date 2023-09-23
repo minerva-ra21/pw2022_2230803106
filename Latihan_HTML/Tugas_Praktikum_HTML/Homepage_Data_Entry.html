@@ -1,14 +1,164 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Homepage Pribadi</title>
+    <title>Homepage Data Entry</title>
     <link rel="website icon" type="png"
-    href="/Latihan_HTML/Image/My Icon.png"
+    href="/Latihan_HTML/image/My Icon.png">
 </head>
 
-<body>
-    SOON
+<body> <!-- menggunakan table -->
+    <!-- Nama: Mustofa Ihsan
+    NIM: 2230803106
+    Kelas: 2283D -->
+    <h3 align="center"><b>Riwayat Hidup</b></h3>
+    <form><Table border="0">
+        <tr>
+            <td>1.</td>
+            <td>Nama</td> 
+            <td>:</td>
+            <td><input type="text" name="Nama"></td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>NRP</td> 
+            <td>:</td>
+            <td><input type="text" name="NRP"></td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>Kelas</td> 
+            <td>:</td>
+            <td><input type="text" name="Kelas"></td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>Jenis Kelamin</td> 
+            <td>:</td>
+            <td><input type="radio" name="Jenis Kelamin" value="Pria"><label for="Pria">Pria</label>
+                <input type="radio" name="Jenis Kelamin" value="Wanita"><label for="Wanita">Wanita</label></td>
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>Agama</td> 
+            <td>:</td>
+            <td><select>
+                    <option>Islam</option>
+                    <option>Kristen</option>
+                    <option>Hindu</option>
+                    <option>Budha</option>
+                </select></td>
+        </tr>
+        <tr>
+            <td>6.</td>
+            <td>Tempat/Tanggal Lahir</td> 
+            <td>:</td>
+            <td><input type="text" name="Tempat"> / <input type="text" name="Tanggal Lahir"></td>
+        </tr>
+        <tr>
+            <td>7.</td>
+            <td>Alamat</td> 
+            <td>:</td>
+            <td><textarea name="Alamat" cols="25" rows="5"></textarea></td>
+        </tr>
+        <tr>
+            <td valign="top">8.</td>
+            <td valign="top">Riwayat Pendidikan</td> 
+            <td valign="top">:</td>
+            <td><table>
+                <tr>
+                    <td>A.</td>
+                    <td>SD</td> 
+                    <td>:</td>
+                    <td><input type="text" name="SD"></td>
+                </tr>
+                <tr>
+                    <td>B.</td>
+                    <td>SMP</td> 
+                    <td>:</td>
+                    <td><input type="text" name="SMP"></td>
+                </tr>
+                <tr>
+                    <td>C.</td>
+                    <td>SMA</td> 
+                    <td>:</td>
+                    <td><input type="text" name="SMA"></td>
+                </tr>
+            </table></td>
+        </tr>
+        <tr>
+            <td>9.</td>
+            <td>Email</td> 
+            <td>:</td>
+            <td><input type="text" name="Email"></td>
+        </tr>
+        <tr>
+            <td>10.</td>
+            <td>Homepage</td> 
+            <td>:</td>
+            <td><input type="text" name="Homepage"></td>
+        </tr>
+        <tr>
+            <td valign="top">11.</td>
+            <td valign="top">Hobby</td> 
+            <td valign="top">:</td>
+            <td><textarea name="Alamat" cols="25" rows="5"></textarea></td>
+        </tr>
+        <tr>
+            <td>12.</td>
+            <td>Interest</td> 
+            <td>:</td>
+            <td><input type="checkbox"name="Interest" value="Komputer"><label for="Komputer">Komputer</label>
+                <input type="checkbox"name="Sport" value="Sport"><label for="Sport">Sport</label>
+                <input type="checkbox"name="Travelling" value="Travelling"><label for="Travelling">Travelling</label>
+                <input type="checkbox"name="Writting" value="Writting"><label for="Writting">Writting</label>
+                <input type="checkbox"name="Reading" value="Reading"><label for="Reading">Reading</label></td>
+        </tr>
+            </Table>
+            <input type="button" name="Simpan" value="Simpan">
+            <input type="button" name="Reset" value="Reset">
+        <br>
+        </form>
 
     <h4><a href="/Latihan_HTML/index.html">Home</a></h4>
+
 </body>
+
+<!-- <body> tanpa table
+    <h3 align="center"><b>Riwayat Hidup</b></h3>
+    <ol><form>
+        <li>Nama:   <input type="text" name="Nama"></li>
+        <li>NRP:    <input type="text" name="Nama"></li>
+        <li>Kelas:  <input type="text" name="Nama"></li>
+        <li>Jenis Kelamin:  <input type="radio" name="Jenis Kelamin" value="Pria"><label for="Pria">Pria</label>
+                            <input type="radio" name="Jenis Kelamin" value="Wanita"><label for="Wanita">Wanita</label></li>
+        <li>Agama:  <select>
+                        <option>Islam</option>
+                        <option>Kristen</option>
+                        <option>Hindu</option>
+                        <option>Budha</option>
+                    </select></li>
+        <li>Tempat/Tanggal Lahir: <input type="text" name="Nama"> / <input type="text" name="Nama"></li>
+        <li>Alamat: <textarea name="Alamat" cols="25" rows="5"></textarea></li>
+        <li>Riwayat Pendidikan:
+            <ol type="A">
+                <li>SD: <input type="text" name="Nama"></li>
+                <li>SMP: <input type="text" name="Nama"></li>
+                <li>SMA: <input type="text" name="Nama"></li>
+            </ol>
+        <li>Email: <input type="text" name="Nama"></li>
+        <li>Homepage:   <input type="text" name="Homepage"></li>
+        <li>Hobby:<textarea name="Alamat" cols="25" rows="5"></textarea></li>
+        <li>Interest:   <input type="checkbox"name="Interest" value="Komputer"><label for="Komputer">Komputer</label>
+                        <input type="checkbox"name="Sport" value="Sport"><label for="Sport">Sport</label>
+                        <input type="checkbox"name="Travelling" value="Travelling"><label for="Travelling">Travelling</label>
+                        <input type="checkbox"name="Writting" value="Writting"><label for="Writting">Writting</label>
+                        <input type="checkbox"name="Reading" value="Reading"><label for="Reading">Reading</label></li>
+    </ol>
+            <input type="button" name="Simpan" value="Simpan">
+            <input type="button" name="Reset" value="Reset">
+        
+        </form>
+
+    <h4><a href="/Latihan_HTML/index.html">Home</a></h4>
+</body> -->
 </html>
