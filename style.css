@@ -1,0 +1,20 @@
+body{
+    background-color: black;
+}
+
+.Youkoso{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: arial;
+    color: lightcoral;
+}
+
+.html, .css, .tugas{
+    border-style: solid;
+    color: lightcoral;
+    background-color:antiquewhite;
+}
+
+.html1, .html2, .css1, .css2, .tugas1, .tugas2{
+    border-style: solid;
+    background-color: antiquewhite;
+}
