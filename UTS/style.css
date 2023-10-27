@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+  margin: 0;
+}
+
+.kiri {
+  width: 20%;
+  height: 350px;
+  background: white;
+  margin-left: 25px;
+  margin-top: 10px;
+  border-top-left-radius: 60px;
+  box-shadow: 2px 2px 2px 2px grey;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin-top: -50px;
+  height: 300px;
+  width: 90%;
+  position: relative;
+}
+
+.logo img {
+  padding: 30px;
+  max-width: 75%; 
+  max-height: 75%; 
+}
+
+.artikel {
+  background-color: darkblue;
+  text-align: left;
+  color: white;
+  font-weight: bold; 
+  padding: 10px;
+  margin-top: -70px;
+}
+
+.list_artikel {
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+}
+
+.list_artikel li {
+  border-bottom: 2px dotted blue; 
+  padding: 2px 0; 
+  margin-left: 25px;
+  margin-right: 25px;
+  font-size: 14px;
+}
+
+
+.kanan {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  flex: 5;
+}
+
+.content1 {
+  margin: 10px;
+  height: 30vh;
+  padding: 15px;
+  width: 70%;
+  background: url(/UTS/img/labor_terpadu.png);
+  border-bottom-right-radius: 60px;
+  position: relative;
+}
+
+.judul {
+  position: absolute;
+  bottom: 40px; 
+  right: 50px; 
+  font-size: 35px; 
+  font-weight: bold; 
+  color: white;
+}
+
+.sub_judul {
+  position: absolute;
+  bottom: 10px;
+  right: 50px;
+  font-size: 24px; 
+  color: cornsilk;
+}
+
+.menu_nav {
+  background-color:darkblue;
+  padding: 5px; 
+  text-align: left;
+  margin: 10px;
+  width: 70%; 
+ 
+}
+
+.menu_nav ul {
+  list-style-type: none; 
+  margin: 0;
+  padding: 0px 10px;
+  
+}
+
+.menu_nav li {
+  display: inline; 
+  margin-left: 7%;
+  margin-right: 5%;
+}
+
+.menu_nav a {
+  text-decoration: none;
+  margin-left: 8px;
+  color: white; 
+  font-weight: bold; 
+  font-size: 14px; 
+}
+
+.content2 {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  margin: 10px;
+  width: 70%;
+}
+
+.content2 > article {
+  padding: 20px;
+  background-color: white;
+  margin: 10px 2px;
+  flex: 4;
+  border: 1px solid black;
+  background: white;
+  margin-bottom: 50px;
+  box-shadow: 2px 2px 4px grey;
+}
+
+.content2 img{
+  height: 400px;
+  width: 600px;
+}
+
+.article h2 {
+  color: blue;
+}
+
+.article p {
+  font-size: 16px;
+  padding: 10px 10px 10px 20px;
+}
+
+.article ol{
+  padding-left: 60px;
+}
+
+.footer {
+  background: darkblue;
+  color: white;
+  padding: 10px 0px; 
+  width: 96%;
+  position: fixed;
+  bottom: 0;
+  left: 25px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+}
+
+.footertext {
+  display: inline-block;
+}
+
+
+.container_galeri {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	gap: 1em;
+	width: 800px;
+	height: 500px;
+	transition: all 400ms;
+}
+
+.container_galeri:hover .box {
+	filter: grayscale(100%) opacity(24%);
+}
+
+.box {
+	position: relative;
+	background: var(--img) center center;
+	background-size: cover;
+	transition: all 400ms;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container_galeri .box:hover {
+	filter: grayscale(0%) opacity(100%);
+}
+
+.container_galeri:has(.box-1:hover) {
+	grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+}
+
+.container_galeri:has(.box-2:hover) {
+	grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+}
+
+.container_galeri:has(.box-3:hover) {
+	grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+}
+
+.container_galeri:has(.box-4:hover) {
+	grid-template-columns: 1fr 1fr 1fr 3fr 1fr;
+}
+
+.box:nth-child(odd) {
+	transform: translateY(-16px);
+}
+
+.box:nth-child(even) {
+	transform: translateY(16px);
+}
+
+.box::after {
+	content: attr(data-text);
+	position: absolute;
+	bottom: 20px;
+	background: #000;
+	color: #fff;
+	padding: 10px 10px 10px 14px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	transform: translateY(60px);
+	opacity: 0;
+	transition: all 400ms;
+}
+
+.box:hover::after {
+	transform: translateY(0);
+	opacity: 1;
+	transition-delay: 400ms;
+}

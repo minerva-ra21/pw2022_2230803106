@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tentang</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="kiri">
+    <div class="logo">
+      <img src="/UTS/img/logo_laboratorium.png" alt="logo"></img>
+    </div>
+
+    <nav class="artikel">Artikel Populer</nav>
+    <ul class="list_artikel">
+      <li>Desain Web</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Lain - lain</li>
+    </ul>
+  </div>
+
+  <div class="kanan">
+    <div class="content1">
+      <p class="judul">Laboratorium Terpadu</p>
+      <p class="sub_judul"> layanan laboratorium untuk penyelenggaraan pendidikan</p>
+    </div>
+
+    <nav class="menu_nav">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="tentang.html">TENTANG</a></li>
+        <li><a href="galeri.html">GALERI</a></li>
+        <li><a href="buku_tamu.html">BUKU TAMU</a></li>
+      </ul>
+    </nav>
+  
+    <div class="content2">
+      <article class="article">
+        <h2>Buku Tamu Laboratorium Terpadu</h2>
+        <p>Kepada para pengunjung diharapkan mengisi buku tamu berikut, terimakasih.</p>
+        <hr>
+        <br>
+        <form>
+            <table width="68%" border="0" align="center" cellpadding="0" class="tabel_buku">
+                <tr>
+                    <td width="33%">Nama</td>
+                    <td width="3%">:</td>
+                    <td width="64%"><input name="txtNama" type="text" id="txtNama"></td>
+                </tr>
+             
+                <tr>
+                    <td>Fakultas</td>
+                    <td>:</td>
+                    <td><select name="cboJob" id="cboJob">
+                        <option>Syariah dan Hukum</option>
+                        <option>Ilmu Tarbiyah dan Keguruan</option>
+                        <option>Ushuluddin dan Pemikiran Islam</option>
+                        <option>Adab dan Humaniora</option>
+                        <option>Dakwah dan Komunikasi</option>
+                        <option>Ekonomi dan Bisnis Islam</option>
+                        <option>Ilmu Sosial dan Politik</option>
+                        <option>Sains dan Teknologi</option>
+                        <option>Psikologi</option>
+                        </select></td>
+                </tr>
+
+                <tr>
+                    <td>Program Studi</td>
+                    <td>:</td>
+                    <td><textarea name="txtprodi" cols="40" rows="2" id="txtprodi"></textarea></td>
+                </tr>
+             
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>:</td>
+                    <td><input name="radJk" type="radio" value="1" checked> Laki-Laki
+                        <input type="radio" name="radJk" value="2"> Perempuan</td>
+                </tr>
+             
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><input name="btnKirim" type="submit" id="btnKirim" value="Kirim">
+                        <input name="btnCancel" type="reset" id="btnCancel" value="Cancel"></td>
+                </tr>
+            </table>
+            </form>
+    </article>
+    </div>
+
+
+  <div class="footer">
+    <div class="footertext">
+      <p>&copy; Copyright 2023. All Rights Reserved<br>Mustofa Ihsan
+    </div>
+  </div>
+
+</body>
+</html>
