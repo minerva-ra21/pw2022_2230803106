@@ -17,7 +17,7 @@ function BilPrima($bil){
 for ($bil= 1; $bil<=20; $bil++){
     if ($bil % 2 == 0) {
         echo "Angka $bil adalah bilangan genap";
-    } 
+    }   
     else {
         echo "Angka $bil adalah bilangan ganjil";
     }
