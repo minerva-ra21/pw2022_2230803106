@@ -40,7 +40,7 @@ if(isset($_POST["cari"])){
         <tr>
             <td><?= $i;?></td>
             <td>
-                <a href="ubah.php?id=<?= $row["id"]; ?>">Edit</a> | 
+                <a href="ubah.php?id=<?= $row["id"];?>">Edit</a> | 
                 <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('yakin?');">Delete</a>
             </td>
             <td><img src="img/<?= $row["gambar"];?>" width="50"></td>

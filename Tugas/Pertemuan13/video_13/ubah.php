@@ -1,10 +1,13 @@
 <?php 
 require 'functions.php';
-
+//ambil data di url
 $id = $_GET["id"];
+//query data mahasiswa berdasarkan id
 $mhs = query("SELECT * FROM mahasiswa WHERE id = $id")[0];
 
+
     if(isset($_POST["submit"])){
+        //cek apakah data berhasil diubah
         if(ubah($_POST) > 0){
             echo "
                 <script>
@@ -31,8 +34,9 @@ $mhs = query("SELECT * FROM mahasiswa WHERE id = $id")[0];
 
 <body>
     <h1>Ubah data mahasiswa</h1>
+
     <form action="" method="post">
-        <input type="hidden" name="id" values="<?= $mhs["id"]; ?>">
+        <input type="hidden" name="id" value="<?= $mhs["id"];?>">
         <ul>
             <li>
                 <label for="nama">Nama: </label>

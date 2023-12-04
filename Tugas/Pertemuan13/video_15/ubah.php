@@ -1,10 +1,13 @@
 <?php 
 require 'functions.php';
-
+//ambil data di url
 $id = $_GET["id"];
+//query data mahasiswa berdasarkan id
 $mhs = query("SELECT * FROM mahasiswa WHERE id = $id")[0];
 
+
     if(isset($_POST["submit"])){
+        //cek apakah data berhasil diubah
         if(ubah($_POST) > 0){
             echo "
                 <script>
@@ -31,9 +34,10 @@ $mhs = query("SELECT * FROM mahasiswa WHERE id = $id")[0];
 
 <body>
     <h1>Ubah data mahasiswa</h1>
+
     <form action="" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="id" values="<?= $mhs["id"]; ?>">
-        <input type="hidden" name="gambarLama" values="<?= $mhs["gambar"]; ?>">
+        <input type="hidden" name="id" value="<?= $mhs["id"];?>">
+        <input type="hidden" name="gambarLama" value="<?= $mhs["gambar"];?>">
         <ul>
             <li>
                 <label for="nama">Nama: </label>
@@ -49,7 +53,7 @@ $mhs = query("SELECT * FROM mahasiswa WHERE id = $id")[0];
             </li>
             <li>
                 <label for="gambar">Gambar: </label> <br>
-                <img src="img/<?= $mhs["gambar"]; ?>" width="50"> <br>
+                <img src="img/<?= $mhs["gambar"];?>" width="50"> <br>
                 <input type="file" name="gambar" id="gambar">
             </li>
             <button type="submit" name="submit">Ubah</button>

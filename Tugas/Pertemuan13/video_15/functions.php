@@ -17,7 +17,7 @@ function tambah($data){
     $nama = htmlspecialchars($data["nama"]);
     $nim = htmlspecialchars($data["nim"]);
     $jurusan = htmlspecialchars($data["jurusan"]);
-
+    
     //upload gambar
     $gambar = upload();
         if(!$gambar){
@@ -31,7 +31,7 @@ function tambah($data){
 }
 
 function upload(){
-    $namaFile = $_FILES['gambar']['name'];
+    $namaFile = $_FILES['gambar']["name"];
     $ukuranFile = $_FILES['gambar']['size'];
     $error = $_FILES['gambar']['error'];
     $tmpName = $_FILES['gambar']['tmp_name'];
@@ -41,8 +41,9 @@ function upload(){
         echo"
             <script>
             alert('pilih gambar terlebih dahulu');
-            </script>";
-    return false;
+            </script>
+        ";
+        return false;
     }
 
     //cek apakah yang di upload adalah gambar
@@ -50,25 +51,30 @@ function upload(){
     $ekstensiGambar = explode('.', $namaFile);
     $ekstensiGambar = strtolower(end($ekstensiGambar));
     if(!in_array($ekstensiGambar, $ekstensiGambarValid)){
-        echo "  <script>
-                    alert('yang anda upload bukan gambar!');
-                </script>";
+        echo"
+            <script>
+            alert('yang anda upload bukan gambar');
+            </script>
+        ";
         return false;
     }
 
     //cek apakah ukuran file terlalu besar
     if($ukuranFile > 2000000){
-        echo "  <script>
-                    alert('ukuran gambar anda terlalu besar')
-                <?script>";
+        echo"
+            <script>
+            alert('ukuran file anda terlalu besar');
+            </script>
+        ";
         return false;
     }
+
     //generate nama file random
     $namaFileBaru = uniqid();
     $namaFileBaru .= '.';
     $namaFileBaru .= $ekstensiGambar;
 
-    //lolos pengecekan gambar siap di upload
+    //lolos pengecekan, gambar siap di upload
     move_uploaded_file($tmpName, 'img/'.$namaFileBaru);
     return $namaFileBaru;
 }
@@ -81,6 +87,7 @@ function hapus($id){
 
 function ubah($data){
     global $conn;
+    
     $id = $data["id"];
     $nama = htmlspecialchars($data["nama"]);
     $nim = htmlspecialchars($data["nim"]);
@@ -88,19 +95,20 @@ function ubah($data){
     $gambarLama = htmlspecialchars($data["gambarLama"]);
 
     //cek user pilih gambar baru atau tidak
-    if($_FILES['gambar']['error'] === 4){
-        $gambar = $gambarLama;
+    if($_FILES['gambar']['error'] === 4 ){
+        $gambar =$gambarLama;
     } else {
         $gambar = upload();
     }
-    $gambar = htmlspecialchars($data["gambar"]);
 
-    $query = "UPDATE mahasiswa SET 
+    $query = "UPDATE mahasiswa SET
         nama = '$nama',
         nim = '$nim',
         jurusan = '$jurusan',
         gambar = '$gambar'
-        WHERE id = $id";
+    WHERE id = $id
+    ";
+
     mysqli_query($conn, $query);
 
     return mysqli_affected_rows($conn);

@@ -33,19 +33,21 @@ function hapus($id){
 
 function ubah($data){
     global $conn;
+    
     $id = $data["id"];
     $nama = htmlspecialchars($data["nama"]);
     $nim = htmlspecialchars($data["nim"]);
     $jurusan = htmlspecialchars($data["jurusan"]);
     $gambar = htmlspecialchars($data["gambar"]);
 
-    $query = "UPDATE mahasiswa SET 
+    $query = "UPDATE mahasiswa SET
         nama = '$nama',
         nim = '$nim',
         jurusan = '$jurusan',
         gambar = '$gambar'
-        WHERE id = $id
+    WHERE id = $id
     ";
+
     mysqli_query($conn, $query);
 
     return mysqli_affected_rows($conn);
