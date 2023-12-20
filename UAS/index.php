@@ -56,7 +56,7 @@
 
         <section id="buku" class="buku">
             <h2><span>Koleksi</span> Buku</h2>
-            <p>Berikut ini adalah daftar buku-buku populer di koleksi kami, buku koleksi disini kami inputkkan dari berbagai sumber, seperti donasi, dan memesan dari penerbit</p>
+            <p>Berikut ini adalah daftar buku-buku populer di koleksi kami, buku koleksi disini kami inputkan dari berbagai sumber, seperti donasi, dan memesan dari penerbit</p>
         </section>
 
         <section class="list-buku">
