@@ -63,12 +63,12 @@
             <table border="1" cellpadding="10" cellspacing="0">
                 <tr>
                     <th>No.</th>
-                    <th>Aksi</th>
                     <th>Gambar</th>
                     <th>Kode Buku</th>
                     <th>Nama Buku</th>
                     <th>Nama Penulis</th>
                     <th>Tahun Terbit</th>
+                    <th>Ubah</th>
                 </tr>
 
                 <?php $i=1;?>
@@ -77,17 +77,15 @@
                     <td>
                         <?= $i;?>
                     </td>
-
-                    <td>
-                        <a href="ubah.php?id=<?= $row["id"];?>">Edit</a> | 
-                        <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('yakin?');">Delete</a>
-                    </td>
-            
                     <td><img src="img/<?= $row["gambar"];?>" width="50"></td>
                     <td><?= $row["kode_buku"];?></td>
                     <td><?= $row["nama_buku"];?></td>
                     <td><?= $row["nama_penulis"];?></td>
                     <td><?= $row["tahun_terbit"];?></td>
+                    <td>
+                        <a href="ubah.php?id=<?= $row["id"];?>">Edit</a> | 
+                        <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('yakin?');">Delete</a>
+                    </td>
                 </tr>
 
                 <?php $i++?>

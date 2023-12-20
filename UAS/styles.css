@@ -52,7 +52,7 @@ footer {
     align-items: center;
 }
 
-.nvabar input {
+.navbar input {
     flex: 1;
     background-color: rgb(245, 245, 245);
     padding-left: 15px;
