@@ -62,7 +62,7 @@ if(isset($_POST["submit"])){
                             <td>Nama Buku</td> 
                             <td>
                                 <label for="kode_buku"></label>
-                                <input type="text" name="nama_buku" kodebuku="nama_buku" required value="<?= $buku["nama_buku"]; ?>">
+                                <input type="text" name="nama_buku" id="nama_buku" required value="<?= $buku["nama_buku"]; ?>">
                             </td>
                         </tr>
 
@@ -89,9 +89,8 @@ if(isset($_POST["submit"])){
                             </td>
                         </tr>
                     </table>
+                    <button type="submit" name="submit" class="input-button">Ubah</button>
                 </form>
-                <button type="submit" name="submit">ubah Data!</button>
-
         </div>
     </main>
 
